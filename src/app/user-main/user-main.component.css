@@ -1,0 +1,39 @@
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+#searchLabel{
+    color:snow;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.searchInput{
+    margin-left:10px;
+    width:80%;
+    border-radius:5px;
+}
+.addUser{
+    color:black;
+    width:60%;
+    margin:20px;
+}
+.mainContent{
+ width:100%;
+ margin:20px;
+}
+.usersList{
+    list-style-type: none;
+}
+.actionButton{
+    float:center;
+}
+
+tbody{
+  display:inline-block;
+  overflow:auto;
+  height:400px;
+  width:100%;
+}
+thead tr{
+  display:block;
+}

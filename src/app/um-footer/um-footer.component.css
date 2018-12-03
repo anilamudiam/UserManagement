@@ -1,0 +1,9 @@
+.umFooter{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    background-color:cornflowerblue;
+}
+.footerContent{
+    text-decoration: none;
+    color:black;
+}

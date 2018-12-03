@@ -1,0 +1,5 @@
+body{
+    background-color:dimgray;
+    background-image: url('..\assets\background.jpg');
+    background-repeat: repeat;
+}

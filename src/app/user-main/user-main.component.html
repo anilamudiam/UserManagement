@@ -1,0 +1,42 @@
+
+<div id="main">
+  <app-side-navbar></app-side-navbar> 
+  <div class="container" style="margin-top:30px;width:80%;">
+  <div class="row">
+    <div class="mainContent">
+        <span id="searchLabel">Search User :</span>
+        <input type="search" ngChange="searchUser()" [(ngModel)] ='searchText' class="searchInput"  style="width:50%;" placeholder="Enter name.." id="user">
+      </div>
+    <div class="col-md-8">
+      <table class="table table-dark table-hover table-fixed scroll">
+        <thead>
+          <tr>
+            <th>User Name</th>
+            <th>User Number</th>
+            <th>User Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of userList | searchList :searchText ;let i=index">
+            <td>{{user.name}}</td>
+            <td>{{user.number}}</td>
+            <td>{{user.address}}</td>
+            <td><a href="javascript:void(0)" (click)="editUser(i,user)" class="btn btn-info btn-sm actionButton">
+                Edit
+                </a>
+            </td>
+            <td><a href="javascript:void(0)"  (click)="deleteUser(i)" class="btn btn-info btn-sm actionButton">
+                Delete
+                </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-4">
+    <button class="btn btn-xs addUser" (click)="toggleUserForm()" >Add User</button>
+     <app-add-user-form *ngIf ="showForm" [editUserObj]="editUserObj" (cancelFormToSend)="toggleUserForm()" (submitFormToSend)="addUpdateUserList($event)"></app-add-user-form>
+    </div>
+  </div>
+</div>
+</div>

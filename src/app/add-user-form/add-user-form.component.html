@@ -1,0 +1,18 @@
+
+  <div>
+    <form class="form-group">
+      
+        <label for="name" class="mb-2 mr-sm-2">Name : </label>
+        <input type="text" class="form-control mb-2 mr-sm-2" name="name" [(ngModel)] ="userModel.userName" placeholder="Enter Name" ng-required>
+        
+        <label for="number" class="mb-2 mr-sm-2">Phone Number:</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" name="number" [(ngModel)] ="userModel.userNumber" placeholder="Enter phone number" ng-required>
+        
+        <label for="address" class="mb-2 mr-sm-2">Address : </label>
+        <input type="text" class="form-control mb-2 mr-sm-2" name="address" [(ngModel)] ="userModel.userAddress" placeholder="Enter address" ng-required>
+        
+      <button type="button" class="btn mb-2 formBtns" style="float:center;" (click)="submitForm()" [disabled]="!userModel.userName || !userModel.userNumber || !userModel.userAddress" >Submit</button>
+      <button type="button" class="btn mb-2 formBtns" style="float:center;" (click)="cancelForm()" >Cancel</button>
+      
+    </form>
+  </div>
